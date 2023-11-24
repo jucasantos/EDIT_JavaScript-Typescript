@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="btn">Botão</button> <br />
+    <br />
+    <br />
+    <button id="pageNumbers">Número de Páginas</button> <br />
+    <p id="pages"></p>
+    <br />
+    <br />
+    <button onclick="setTimeout(myFunction, 2000)">Temporizador</button>
+
+    <script>
+      //EX1
+
+      function goBtn() {
+        const urlIndex = "https://www.w3schools.com/";
+
+        window.location.href = urlIndex;
+      }
+      const button = document.getElementById("btn");
+
+      button.addEventListener("click", goBtn);
+
+      //EX2
+
+      document
+        .getElementById("pageNumbers")
+        .addEventListener("click", function () {
+          const numPages = window.history.length;
+
+          document.getElementById("pages").innerText = numPages;
+        });
+
+      //EX3
+
+      window.onload = function () {
+        alert("The page has fully loaded");
+      };
+
+      //EX4
+
+      function myFunction() {
+        alert("Acabou o tempo");
+      }
+    </script>
+  </body>
+</html>
