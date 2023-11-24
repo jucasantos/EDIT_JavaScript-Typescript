@@ -11,11 +11,15 @@
     ></script>
   </head>
   <body>
-    <div>Click here</div>
+    <ul id="myList">
+      <li>Clique para remover</li>
+      <li>Clique para remover</li>
+      <li>Clique para remover</li>
+    </ul>
     <script>
       $(document).ready(function () {
-        $("div").click(function () {
-          $(this).text("Clicked");
+        $("#myList").on("click", "li", function () {
+          $(this).remove();
         });
       });
     </script>

@@ -11,11 +11,12 @@
     ></script>
   </head>
   <body>
-    <div>Click here</div>
+    <button id="addButton">Adicionar item</button>
+    <ul id="myList"></ul>
     <script>
       $(document).ready(function () {
-        $("div").click(function () {
-          $(this).text("Clicked");
+        $("#addButton").click(function () {
+          $("#myList").append("<li>Novo item</li>");
         });
       });
     </script>
